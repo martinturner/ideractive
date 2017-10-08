@@ -1,0 +1,30 @@
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Subject: <%= title %></h3>
+  </div>
+  <div class="panel-body">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Surname</th>
+      <th>Score</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% results.each do |result| %>
+      <tr>
+        <td><%= result.student.name %></td>
+        <td><%= result.student.surname %></td>
+        <td><%= result.score %></td>
+        <td><%= link_to 'Show', result, class: "btn btn-info" %></td>
+        <td><%= link_to 'Edit', edit_result_path(result), class: "btn btn-success" %></td>
+        <td><%= link_to 'Destroy', result, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
+      </tr>
+<% end %>
+  </tbody>
+</table>
+</div>
+</div>

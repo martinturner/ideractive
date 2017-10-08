@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Results</h1>
+  <%= render 'subjectresults', results:  @result_english, title: 'English' %>
+  
+  <%= render 'subjectresults', results:  @result_math, title: 'Maths' %>
+<br>
+
+<%= link_to 'New Result', new_result_path, class: "btn btn-success" %>
